@@ -19,8 +19,12 @@
         <a href="#tort">Тортик</a>
         <a href="#blin">Блинчики</a>
         <a href="#kar">Карамель</a>
-        <a href="">Контакты</a>
+        <a href="#foot">Это кто</a>
         <button>Сменить тему</button>
+        <div class="menu-burger">
+            <span></span>
+        </div>
+              
     </nav>
 
     <main>
@@ -112,11 +116,27 @@
             </div>
         </div>
 
-
+        <div class='card'>
+            <form>
+            <label for='name' hidden></label>
+            <input type='text' v-model="name" required id='name' placeholder='Название'>
+            
+            <label for='ingred' hidden></label>
+            <input type='text' v-model="writer" required id='ingred' placeholder='Ингредиенты'>
+            
+            <label for='genre' hidden></label>
+            <input type='sposob' v-model="genre" required id='sposob' placeholder='Способ приготовления'>
+            
+            <label for='text' hidden></label>
+            <textarea rows="10" cols="45" name="text" v-model="text" required id='text' placeholder='Описание'></textarea>
+            
+            <button class='submit' @click='clickfunction' :disabled="isDisabled">Добавить</button>
+            </form>
+        </div>
     </main>
 
-    <footer>
-
+    <footer id="foot">
+        <p>Терентьева СК  |  201-322  |  01.06.2021</p>
     </footer>
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
