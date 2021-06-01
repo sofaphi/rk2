@@ -1,0 +1,139 @@
+body {
+    background-color: #F1FAEE;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20;
+    color: black;
+    background-image: url(imgs/fon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav {
+    background-color: #457B9D;
+    display: flex;
+    justify-content: space-evenly;
+    height: 30px;
+    padding: 15px 0;
+    font-size: 1.4em;
+}
+
+nav a {
+    text-decoration: none;
+    display: inline;
+    color: black;
+}
+
+nav img {
+    margin: 0 100px 0 30px;
+}
+
+nav button {
+    border: none;
+    background-color: #E63946;
+    border-radius: 5%;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    height: 35px;
+    font-size: 1em;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    color: whitesmoke;
+}
+
+h2 {
+    text-align: center;
+}
+
+main {  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+}
+
+.card {
+    background-color: #1D3557;
+    color: whitesmoke;
+    width: 70%;
+    border-radius: 1%;
+    margin: 50px auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.left-side, .right-side {
+    margin: 0 30px;
+}
+
+.left-side ul {
+    display: inline;
+}
+
+.right-side img {
+    max-width: 80%;
+}
+
+@media screen and (max-width: 1024px){    
+    nav a {
+        font-size: 0.9em;
+    }
+
+    nav button {
+        font-size: 0.7em;
+        height: 31px;
+    }
+
+    .card {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav a {
+        font-size: 0.8em;
+    }
+
+    nav img {
+        margin: 0 80px 0 25px;
+    }
+
+    nav button {
+        font-size: 0.6em;
+        height: 27px;
+    }
+
+    .card {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    nav {
+        height: 20px;
+    }
+    
+    nav a {
+        font-size: 0.6em;
+    }
+
+    nav button {
+        font-size: 0.5em;
+        height: 23px;
+        margin-bottom: 5px;
+    }
+
+    .card {
+        width: 85%;
+        margin: 30px auto;
+    }
+}
+
