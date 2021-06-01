@@ -9,7 +9,7 @@ body {
 }
 
 nav {
-    background-color: #457B9D;
+    background-color: #457b9de7;
     display: flex;
     justify-content: space-evenly;
     height: 30px;
@@ -56,7 +56,7 @@ main {
 }
 
 .card {
-    background-color: #1D3557;
+    background-color: #1d3557d8;
     color: whitesmoke;
     width: 70%;
     border-radius: 1%;
@@ -82,6 +82,53 @@ main {
     max-width: 80%;
 }
 
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 18px;
+    margin: 50px;
+    margin-left: 20%;
+    padding: 30px;
+    width: 50%;
+    margin-left: 25%;
+    }
+    
+input, label {
+    display: block;
+    outline: none;
+    border: none;
+    height: 25px;
+    width: 190px;
+    margin: 10px;
+}
+    
+input{
+    border: 1px solid #cbcbcb;
+    background-color:#eee;
+}
+    
+.inputs {
+    grid-gap: 25px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    font-weight: 700;
+    }
+
+form button {
+    width: 100px;
+}
+
+footer {
+    background-color: #457b9de7;
+    height: 50px;
+    text-align: center;
+}
+
+
+
+
+
 @media screen and (max-width: 1024px){    
     nav a {
         font-size: 0.9em;
@@ -98,42 +145,57 @@ main {
 }
 
 @media screen and (max-width: 768px) {
-    nav a {
-        font-size: 0.8em;
+    .menu-burger {
+        position: relative; 
+        width: 40px; 
+        height: 35px;
+        display: block;
+        margin-left: 10px;
     }
-
-    nav img {
-        margin: 0 80px 0 25px;
+    .menu-burger span, .menu-burger:after, .menu-burger:before{
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        background: #515758;
+        margin: 0 auto;
     }
-
-    nav button {
-        font-size: 0.6em;
-        height: 27px;
+    .menu-burger span{
+        top: 16px;
     }
-
-    .card {
-        width: 85%;
+    .menu-burger:after, .menu-burger:before{
+        content: '';
     }
-}
-
-@media screen and (max-width: 650px) {
-    nav {
-        height: 20px;
+    .menu-burger:after{
+        bottom: 5px;
     }
-    
-    nav a {
-        font-size: 0.6em;
+    .menu-burger:before{
+        top: 5px;
     }
-
-    nav button {
-        font-size: 0.5em;
-        height: 23px;
-        margin-bottom: 5px;
+    nav a, nav button {
+        display: block;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        background: #457B9D;
+        width: 100%;
     }
-
-    .card {
-        width: 85%;
-        margin: 30px auto;
+    .nav a, nav button {
+        margin: 40px 0px 40px 33px;
+        font-size: 14px;
+    }
+    .menu-burger.open-menu span {
+        opacity:0; 
+        transition: 0.5s; 
+    }
+    .menu-burger.open-menu:before {
+        transform: rotate(38deg);
+        top: 16px;
+        transition: 0.4s;
+    }
+    .menu-burger.open-menu:after {
+        transform: rotate(-38deg);
+        bottom: 16px;
+        transition: 0.4s;
     }
 }
 
